@@ -100,7 +100,7 @@ def harvest(plant_id):
 
     # TODO: Make an `insert_one` database call to insert the object into the
     # `harvests` collection of the database.
-    result = db.harvests.insert_one(new_harvest)
+    result = db.harvests.insert_one('new_harvest')
 
     return redirect(url_for('detail', plant_id=plant_id))
 
@@ -146,7 +146,7 @@ def delete(plant_id):
 
     db.harvests.delete_many({'plant_id': ObjectId(plant_id)})
 
-    return redirect(url_for(''))
+    return redirect(url_for('plants_list'))
 
 
 if __name__ == '__main__':
