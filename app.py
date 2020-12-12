@@ -146,7 +146,7 @@ def delete(plant_id):
 
     db.harvests.delete_many({'plant_id': ObjectId(plant_id)})
 
-    return redirect(url_for('plants_list'))
+    return redirect(url_for(''))
 
 
 if __name__ == '__main__':
