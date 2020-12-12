@@ -1,10 +1,16 @@
 from flask import Flask, request, redirect, render_template, url_for
 from bson.objectid import ObjectId
 import pymongo
+from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
 ############################################################
 # SETUP
 ############################################################
+
+load_dotenv()
+
 
 app = Flask(__name__)
 
